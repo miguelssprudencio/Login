@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    background-color: rgba(255, 255, 255, 0.781);
+
+
+}
+
+
+p {
+    color: rgba(255, 255, 255, 0.514);
+    font-family: "Arvo", serif;
+    text-align: center;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.767);
+    font-family: "Arvo", serif;
+    text-align: center;
+    margin-top: auto;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.507);
+    backdrop-filter: blur(5px);
+}
+
+button {
+    background-color: rgba(94, 94, 94, 0.61);
+    color: rgb(235, 235, 235);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(5px);
+}
+
+input {
+    color: rgba(255, 255, 255, 0.767);
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.219);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.486);
+    backdrop-filter: blur(5px);
+    outline: none;
+    font-family: "Arvo", serif;
+}
+
+div {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Arvo", serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+input[type="password"]::-webkit-reveal,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-ms-reveal {
+    display: none !important;
+}
+
+span {
+    margin-top: -5px;
+}
+
+input:hover {
+    border-color: rgba(255, 255, 255, 0.507);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    border-color: rgba(255, 255, 255, 0.507);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+button:hover {
+    background-color: rgba(94, 94, 94, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.login-container {
+
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 100px auto;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.input-container i {
+    margin-bottom: 5px;
+    font-family: "Arvo", serif;
+}
+
+
+.input-container input {
+    padding-left: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group i {
+    margin-bottom: 5px;
+    font-family: "Arvo", serif;
+}
+
+.input-group input {
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.password-container {
+    position: relative;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.password-container input {
+    width: 200px;
+    padding-right: 40px;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+}
