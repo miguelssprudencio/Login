@@ -8,15 +8,7 @@
 
     <link rel="stylesheet" href="login.css">
 
-    <style>
-        body {
-            background-image: url('pexels-kratz-1363876.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -50,8 +42,7 @@
                 <div class="password-container">
                     <input type="password" id="password" name="password" required>
                     <span id="togglePassword">👁</span>
-                </div>
-
+                 </div>
             </div>
 
             <br><br>
@@ -65,26 +56,7 @@
         </form>
     </div>
 
-    <script>
-        const form = document.querySelector('form');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            alert(`Nome de usuário: ${username}\nSenha: ${password}`);
-        });
-
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('password');
-
-        togglePassword.addEventListener('click', function () {
-            const type = passwordInput.type === 'password' ? 'text' : 'password';
-            passwordInput.type = type;
-        });
-    </script>
+<script src="login.js"></script> 
 
 </body>
 
