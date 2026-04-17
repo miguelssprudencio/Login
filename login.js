@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 
-// Função para mostrar o alert customizado
+
 function showCustomAlert(message) {
     const alertElement = document.getElementById('customAlert');
     const alertMessage = document.getElementById('alertMessage');
@@ -10,7 +10,7 @@ function showCustomAlert(message) {
     alertElement.classList.add('show');
 }
 
-// Função para fechar o alert customizado
+
 function closeCustomAlert() {
     const alertElement = document.getElementById('customAlert');
     alertElement.classList.add('hide');
@@ -20,12 +20,45 @@ function closeCustomAlert() {
     }, 300);
 }
 
+
+function showErrorMessage(message) {
+    const errorElement = document.getElementById('errorMessage');
+    const errorText = document.getElementById('errorText');
+    
+    errorText.textContent = message;
+    errorElement.classList.add('show');
+    
+    
+    setTimeout(() => {
+        errorElement.classList.remove('show');
+    }, 5000);
+}
+
+
+function clearErrorMessage() {
+    const errorElement = document.getElementById('errorMessage');
+    errorElement.classList.remove('show');
+}
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
 
+   
+    if (!username) {
+        showErrorMessage('Por favor, preencha o nome de usuário!');
+        return;
+    }
+    
+    if (!password) {
+        showErrorMessage('Por favor, preencha a senha!');
+        return;
+    }
+
+    
+    clearErrorMessage();
     showCustomAlert(`Nome de usuário: ${username}\nSenha: ${password}`);
 });
 
