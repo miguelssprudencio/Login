@@ -1,12 +1,32 @@
 const form = document.querySelector('form');
 
+// Função para mostrar o alert customizado
+function showCustomAlert(message) {
+    const alertElement = document.getElementById('customAlert');
+    const alertMessage = document.getElementById('alertMessage');
+    
+    alertMessage.textContent = message;
+    alertElement.classList.remove('hide');
+    alertElement.classList.add('show');
+}
+
+// Função para fechar o alert customizado
+function closeCustomAlert() {
+    const alertElement = document.getElementById('customAlert');
+    alertElement.classList.add('hide');
+    
+    setTimeout(() => {
+        alertElement.classList.remove('show', 'hide');
+    }, 300);
+}
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    alert(`Nome de usuário: ${username}\nSenha: ${password}`);
+    showCustomAlert(`Nome de usuário: ${username}\nSenha: ${password}`);
 });
 
 const togglePassword = document.getElementById('togglePassword');
