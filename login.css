@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
     background-color: rgba(255, 255, 255, 0.781);
     background-image: url('pexels-kratz-1363876.jpg');
@@ -41,19 +61,58 @@ button {
     backdrop-filter: blur(5px);
 }
 
+.input-field {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.514);
+    pointer-events: none;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    z-index: 10;
+}
+
+.input-icon-right {
+    left: auto;
+    right: 12px;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.514);
+}
+
+.input-icon-right:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
 input {
     color: rgba(255, 255, 255, 0.767);
     display: block;
-    margin: 20px auto;
-    padding: 10px;
-    width: 200px;
+    padding: 12px 12px 12px 12px;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.219);
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.24);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.486);
-    backdrop-filter: blur(5px);
     outline: none;
     font-family: "Arvo", serif;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 div {
@@ -79,8 +138,23 @@ input[type="password"]::-ms-reveal {
     display: none !important;
 }
 
-span {
-    margin-top: -5px;
+.toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.toggle-eye:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.toggle-lock {
+    cursor: pointer;
 }
 
 input:hover {
@@ -100,68 +174,27 @@ button:hover {
 }
 
 .login-container {
-
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
+    width: 340px;
     margin: 100px auto;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.144);
+    animation: slideIn 0.8s ease-out;
 }
 
-.input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+h1 {
+    animation: slideIn 0.8s ease-out 0.1s both;
 }
 
-
-.input-container i {
-    margin-bottom: 5px;
-    font-family: "Arvo", serif;
+.input-field {
+    animation: slideIn 0.8s ease-out;
 }
 
-
-.input-container input {
-    padding-left: 30px;
+.input-field:nth-child(2) {
+    animation: slideIn 0.8s ease-out 0.2s both;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.input-group i {
-    margin-bottom: 5px;
-    font-family: "Arvo", serif;
-}
-
-.input-group input {
-    padding-left: 30px;
-    margin-top: 10px;
-}
-
-.password-container {
-    position: relative;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.password-container input {
-    width: 200px;
-    padding-right: 40px;
-}
-
-#togglePassword {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: white;
+.input-field:nth-child(3) {
+    animation: slideIn 0.8s ease-out 0.3s both;
 }
