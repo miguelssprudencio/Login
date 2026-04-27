@@ -71,3 +71,14 @@ body {
 .calculator .button:active {
     transform: scale(0.95);
 }
+
+.btn-clear {
+    grid-column: span 2;
+}
+
+.btn-zero {
+    grid-column: span 3;
+}
+
+
+  
